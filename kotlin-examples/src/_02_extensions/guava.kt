@@ -5,7 +5,7 @@ import com.google.common.base.Function
 import com.google.common.base.Predicate
 
 fun main(args: Array<String>) {
-    val list = arrayList("a", "bb", "acc")
+    val list = listOf("a", "bb", "acc")
 
 
 

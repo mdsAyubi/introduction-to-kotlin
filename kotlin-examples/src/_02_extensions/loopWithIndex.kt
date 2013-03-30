@@ -1,9 +1,18 @@
 package _02_extensions.loopWithIndex
 
 fun main(args: Array<String>) {
-    val list = arrayList("a", "b", "c")
-    list.loopWithIndex({i, v -> println("list[$i] = $v")})
+    val list = listOf("a", "b", "c")
+
+    for ((i, v) in list.withIndices()) {
+        println("list[$i] = $v")
+    }
 }
+
+
+
+
+
+
 
 fun <T> Iterable<T>.loopWithIndex(body: (index: Int, value: T) -> Unit) {
     var i = 0

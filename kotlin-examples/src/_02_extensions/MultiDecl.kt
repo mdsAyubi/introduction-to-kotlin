@@ -9,6 +9,20 @@ fun main(args : Array<String>) {
     val (x, y) = Point(1, 2)
     println("($x, $y)")
 
+
+
+
+
+
+    val map = mapOf(
+            "One" to 1,
+            "Two" to 2,
+            "Three" to 3
+    )
+    for ((k, v) in map) {
+        println("map[$k] = $v")
+    }
+
 //    testMultiReturn()
 //    testIndexedIteration()
 }
