@@ -1,0 +1,77 @@
+
+
+  Introduction
+
+  Examples
+
+      Hello, world
+
+          Basic: Top-level function, (Packages classes), Kotlin has no statics
+
+          Object-Oriented: Class, Function, Constructor, Property, String template
+
+      Beans and Data classes
+
+          Declaring properties in primary constructors (User bean)
+
+          Data classes (Point class)
+
+              Multi-declarations / Returning many things from a function
+
+              Iterating a list with indices
+
+              Iterating a map
+
+      Basic functions & Parameters
+
+          Default arguments (makeString/join)
+
+          Named parameters ( - " - )
+
+          Vararg parameters (listOf())
+
+          -- Multiple return values
+
+      Extensions
+
+          Motivation
+              We all LOVE utility classes, don't we?! (Show StringUtil from Apache commons)
+                  If your project doesn't have a StringUtil, be honest — it does!
+
+              Let's pretend that we have Lambdas in Java and look at Guava (transform(filter(list, {}) {}))
+                  My, it's BACKWARDS
+
+              And how do I find that method I need?
+                  By Ctlr+Space, _if it is a member_!
+
+              It would be so cool to just add a method to that class/interface!
+                  In Java 8 you can, _if you own the class/interface_
+                  Prior to Java 8 you couldn't add a method to a public interface
+
+          Extensions
+              In Kotlin you DO NOT exactly add methods to classes you don't own
+
+              You write _extensions_ and call them as if they were methods
+                  Limitation: extensions are not virtual (you can not override one)
+
+                  Simple Example: File.write
+
+                  Collection processing: filter / map VS Guava
+
+              Java 8 extensions vs Kotlin extensions
+
+              More:
+                  Extensions enable fluent APIs
+                  Extensions enable conventions
+                  Extensions enable enhanced Java APIs
+
+      Fighting NPEs
+          File.listFiles()
+          NPE on something from a list
+          Java annotations / KAnnotator / Smart casts
+
+      Variant collections
+          Read Bloch's examples
+
+      Kara, Web, DSLs, JS
+
