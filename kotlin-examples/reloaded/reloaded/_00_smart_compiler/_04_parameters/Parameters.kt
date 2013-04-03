@@ -4,9 +4,26 @@ fun main(args: Array<String>) {
     val list = listOf(1, 2, 3)
 
     println(makeString(list, ", ", "(", ")"))
+    // 1, 2, 3
 
-    println(makeString(list, ", "))
+    println(makeString(list, ", ", "(", ")"))
+    // (1, 2, 3)
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 fun <T> makeString(c: Collection<T>, separator: String): String {
     return makeString(c, separator, "", "")

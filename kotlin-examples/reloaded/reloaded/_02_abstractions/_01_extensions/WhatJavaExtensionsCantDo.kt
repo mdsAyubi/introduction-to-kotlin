@@ -4,8 +4,11 @@ import java.io.File
 
 
 fun File.getExtension(): String {
+
     val name = getName()
+
     val dotIndex = name.lastIndexOf('.')
+
     return if (dotIndex < 0) ""
            else name.substring(dotIndex + 1)
 }
