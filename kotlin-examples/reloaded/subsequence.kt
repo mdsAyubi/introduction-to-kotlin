@@ -58,7 +58,5 @@ val LAST = object : SequencePosition {
 
 fun SequencePosition.minus(delta: Int): SequencePosition
         = object : SequencePosition {
-                override fun toIndex(size: Int): Int {
-                    this@minus.toIndex(size) - delta
-                }
+                override fun toIndex(size: Int): Int = this@minus.toIndex(size) - delta
             }
