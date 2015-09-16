@@ -75,7 +75,3 @@ var JFrame.width : Int
     get() = getSize().getWidth().toInt()
     set(w) {setSize(height, w)}
 
-var JFrame.defaultCloseOperation : Int
-    get() = getDefaultCloseOperation()
-    set(def) {setDefaultCloseOperation(def)}
-

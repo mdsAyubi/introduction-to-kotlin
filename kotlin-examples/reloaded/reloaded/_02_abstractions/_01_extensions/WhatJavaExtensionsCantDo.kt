@@ -5,7 +5,7 @@ import java.io.File
 
 fun File.getExtension(): String {
 
-    val name = getName()
+    val name = name
 
     val dotIndex = name.lastIndexOf('.')
 

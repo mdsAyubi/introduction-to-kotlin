@@ -35,7 +35,7 @@ fun render() : String {
 fun main(args : Array<String>) {
     val frame = JFrame("HTML")
     frame.setSize(800, 600)
-    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)
+    frame.defaultCloseOperation = JFrame.EXIT_ON_CLOSE
     val scrollPane = JScrollPane(JLabel(
             render()
     ))

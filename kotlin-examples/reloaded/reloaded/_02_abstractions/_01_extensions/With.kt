@@ -37,9 +37,7 @@ fun main(args: Array<String>) {
 
 
 
-    with(stringBuilder, {
-
-        StringBuilder.() ->
+    with(stringBuilder, fun StringBuilder.() {
 
         this.append("prefix")
         for (i in 1..10) {

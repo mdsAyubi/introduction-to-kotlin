@@ -8,8 +8,8 @@ fun String.get(range: Range<Int>): String {
 
 fun String.get(range: Pair<SequencePosition, SequencePosition>): String {
     return substring(
-            range.first.toIndex(size),
-            range.second.toIndex(size) + 1
+            range.first.toIndex(length()),
+            range.second.toIndex(length()) + 1
     )
 }
 
@@ -26,12 +26,12 @@ fun <T> List<T>.get(range: Progression<Int>): List<T> {
 
 fun <T> List<T>.get(range: Pair<SequencePosition, SequencePosition>): List<T> {
     return subList(
-            range.first.toIndex(size),
-            range.second.toIndex(size) + 1
+            range.first.toIndex(size()),
+            range.second.toIndex(size()) + 1
     )
 }
 
-trait SequencePosition {
+interface SequencePosition {
     fun toIndex(size: Int): Int
 
     fun rangeTo(other: SequencePosition): Pair<SequencePosition, SequencePosition> {

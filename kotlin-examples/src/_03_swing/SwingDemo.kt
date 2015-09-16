@@ -15,11 +15,11 @@ fun main(args : Array<String>) {
 
         south = JPanel {
             west = JButton("Clear") {
-                text.setText("")
+                text.text = ""
             }
 
             east = JButton("Restore") {
-                text.setText(greeting)
+                text.text = greeting
             }
         }
     }.show()

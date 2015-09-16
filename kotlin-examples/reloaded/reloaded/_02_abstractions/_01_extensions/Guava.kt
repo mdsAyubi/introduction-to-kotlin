@@ -16,7 +16,7 @@ fun main(args: Array<String>) {
                list,
                p { s -> s.startsWith("a")}
         ),
-        gf { s -> s.length }
+        gf { s -> s.length() }
     )
 
     println(gl)
@@ -37,7 +37,7 @@ fun main(args: Array<String>) {
     // Kotlin's way with extension functions
     val kl = list
                 .filter { s -> s.startsWith("a") }
-                .map { s -> s.length }
+                .map { s -> s.length() }
 
     println(kl)
 

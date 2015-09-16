@@ -24,7 +24,7 @@ fun main(args : Array<String>) {
 
 
     if (files != null) {
-        println(files.size)
+        println(files.size())
     }
 
 
@@ -52,7 +52,7 @@ fun main(args : Array<String>) {
 
 
 
-    println(files?.size)
+    println(files?.size())
 
 
 
@@ -68,7 +68,7 @@ fun main(args : Array<String>) {
 
 
 
-    println(files?.size ?: "no files")
+    println(files?.size() ?: "no files")
 }
 
 fun fail() = throw IllegalArgumentException()
