@@ -3,7 +3,7 @@ package _02_extensions.loopWithIndex
 fun main(args: Array<String>) {
     val list = listOf("a", "b", "c")
 
-    for ((i, v) in list.withIndices()) {
+    for ((i, v) in list.withIndex()) {
         println("list[$i] = $v")
     }
 }
