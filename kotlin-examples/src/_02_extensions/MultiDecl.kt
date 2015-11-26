@@ -27,8 +27,8 @@ fun main(args : Array<String>) {
 //    testIndexedIteration()
 }
 
-fun Point.component1() = x
-fun Point.component2() = y
+operator fun Point.component1() = x
+operator fun Point.component2() = y
 
 
 

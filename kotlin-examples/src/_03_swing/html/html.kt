@@ -29,7 +29,7 @@ class Text(val text : String) : Tag("b") {
     override fun toString() = text
 }
 
-fun Tag.doInit<T : Tag>(t : T, f : T.() -> Unit) : T{
+fun <T : Tag> Tag.doInit(t : T, f : T.() -> Unit) : T{
     t.f()
     children.add(t)
     return t
