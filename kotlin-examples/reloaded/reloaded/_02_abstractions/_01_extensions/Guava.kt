@@ -16,7 +16,7 @@ fun main(args: Array<String>) {
                list,
                p { s -> s.startsWith("a")}
         ),
-        gf { s -> s.length() }
+        gf { s -> s.length }
     )
 
     println(gl)
@@ -37,7 +37,7 @@ fun main(args: Array<String>) {
     // Kotlin's way with extension functions
     val kl = list
                 .filter { s -> s.startsWith("a") }
-                .map { s -> s.length() }
+                .map { s -> s.length }
 
     println(kl)
 
@@ -73,7 +73,7 @@ fun main(args: Array<String>) {
 
 
 
-fun p<T>(body: (T) -> Boolean): Predicate<T>
+fun <T> p(body: (T) -> Boolean): Predicate<T>
         = object : Predicate<T> {
 
             public override fun apply(p0: T): Boolean {
@@ -81,7 +81,7 @@ fun p<T>(body: (T) -> Boolean): Predicate<T>
             }
         }
 
-fun gf<T>(body: (String) -> T): Function<String, T>
+fun <T> gf(body: (String) -> T): Function<String, T>
         = object : Function<String, T> {
             public override fun apply(p0: String): T {
                 return body(p0)

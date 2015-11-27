@@ -35,4 +35,4 @@ val String.bd : BigDecimal
 
 
 
-fun BigDecimal.minus(other : BigDecimal) = this.subtract(other)
+operator fun BigDecimal.minus(other : BigDecimal) = this.subtract(other)

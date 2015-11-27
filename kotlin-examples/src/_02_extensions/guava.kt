@@ -14,7 +14,7 @@ fun main(args: Array<String>) {
                list,
                p { s -> s.startsWith("a")}
         ),
-        gf { s -> s.length() }
+        gf { s -> s.length }
     )
 
     println(gl)
@@ -37,23 +37,23 @@ fun main(args: Array<String>) {
 
 }
 
-fun p<T>(body: (T) -> Boolean): Predicate<T>
+fun <T> p(body: (T) -> Boolean): Predicate<T>
         = object : Predicate<T> {
             public override fun apply(p0: T): Boolean {
                 return body(p0)
             }
 
-            public override fun equals(p0: Any?): Boolean {
+            public override fun equals(other: Any?): Boolean {
                 throw UnsupportedOperationException()
             }
         }
 
-fun gf<T>(body: (String) -> T): Function<String, T>
+fun <T> gf(body: (String) -> T): Function<String, T>
         = object : Function<String, T> {
             public override fun apply(p0: String): T {
                 return body(p0)
             }
-            public override fun equals(p0: Any?): Boolean {
+            public override fun equals(other: Any?): Boolean {
                 throw UnsupportedOperationException()
             }
 

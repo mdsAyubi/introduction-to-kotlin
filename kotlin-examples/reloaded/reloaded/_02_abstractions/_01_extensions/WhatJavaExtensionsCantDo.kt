@@ -44,6 +44,6 @@ fun main(args: Array<String>) {
 
 
 
-fun StringBuilder.plusAssign(a: Any) {
+operator fun StringBuilder.plusAssign(a: Any) {
     append(a)
 }
