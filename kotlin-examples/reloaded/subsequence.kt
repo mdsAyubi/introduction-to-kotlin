@@ -2,20 +2,20 @@ package subsequence
 
 import java.util.ArrayList
 
-operator fun String.get(range: Range<Int>): String {
-    return substring(range.start, range.end + 1)
+operator fun String.get(range: ClosedRange<Int>): String {
+    return substring(range.start, range.endInclusive + 1)
 }
 
 operator fun String.get(range: Pair<SequencePosition, SequencePosition>): String {
     return substring(
-            range.first.toIndex(length()),
-            range.second.toIndex(length()) + 1
+            range.first.toIndex(length),
+            range.second.toIndex(length) + 1
     )
 }
 
-operator fun <T> List<T>.get(range: Progression<Int>): List<T> {
-    if (range.increment == 1) {
-        return subList(range.start, range.end + 1)
+operator fun <T> List<T>.get(range: IntProgression): List<T> {
+    if (range.step == 1) {
+        return subList(range.first, range.last + 1)
     }
     val result = ArrayList<T>()
     for (i in range) {
@@ -26,8 +26,8 @@ operator fun <T> List<T>.get(range: Progression<Int>): List<T> {
 
 operator fun <T> List<T>.get(range: Pair<SequencePosition, SequencePosition>): List<T> {
     return subList(
-            range.first.toIndex(size()),
-            range.second.toIndex(size()) + 1
+            range.first.toIndex(size),
+            range.second.toIndex(size) + 1
     )
 }
 

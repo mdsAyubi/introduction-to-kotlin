@@ -32,7 +32,7 @@ fun main(args : Array<String>) {
 
 
 
-    println("${minors.size()} user(s) over 30 years old")
+    println("${minors.size} user(s) over 30 years old")
 
 
 

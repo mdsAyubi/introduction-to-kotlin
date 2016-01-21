@@ -31,7 +31,7 @@ fun main(args: Array<String>) {
 
     val kl = list
                 .filter { s -> s.startsWith("a") }
-                .map { s -> s.length() }
+                .map { s -> s.length }
 
     println(kl)
 

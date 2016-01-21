@@ -11,7 +11,7 @@ fun main(args: Array<String>) {
 
 fun String.lastChar(): Char {
 
-    return this.charAt(this.length() - 1)
+    return this[this.length - 1]
 
 }
 

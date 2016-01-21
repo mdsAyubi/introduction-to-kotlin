@@ -97,7 +97,7 @@ class StringIteratorWithIndices(val str: String) : Iterator<Pair<Int, Char>> {
         return result
     }
 
-    public override fun hasNext(): Boolean = i < str.length()
+    public override fun hasNext(): Boolean = i < str.length
 
 }
 
